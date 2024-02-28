@@ -1,0 +1,8 @@
+[package]
+name = "listing_consumer"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+substring.workspace = true
+anyhow.workspace = true

@@ -1,0 +1,12 @@
+[workspace]
+members = ["shared/substring", "services/doldrums/mred/listing_consumer"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+version = "0.10.0"
+
+[workspace.dependencies]
+substring = { path = "./shared/substring" }
+
+anyhow = "1.0.80"

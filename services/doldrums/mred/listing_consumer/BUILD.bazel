@@ -1,0 +1,17 @@
+load("@crate_index//:defs.bzl", "all_crate_deps")
+load("@rules_rust//rust:defs.bzl", "rust_binary")
+
+rust_binary(
+    name = "listing_consumer",
+    srcs = ["src/main.rs"],
+    deps = ["//shared/substring"] + all_crate_deps(normal = True),
+)
+
+platform(
+    name = "aarch64_linux",
+    constraint_values = [
+        "@platforms//os:linux",
+        "@platforms//cpu:aarch64",
+        "@zig_sdk//libc:musl",
+    ],
+)

@@ -1,0 +1,6 @@
+[package]
+name = "substring"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
